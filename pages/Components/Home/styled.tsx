@@ -1,4 +1,6 @@
-import styled from 'styled-components'
+import styled,{ keyframes } from 'styled-components'
+import media from "styled-media-query";
+
 
 export const Section = styled.section`
 
@@ -6,7 +8,17 @@ export const Section = styled.section`
  flex-direction:column;
  align-items:center;
  height:100vh;
- background: linear-gradient(137deg, rgba(9,30,58,1) 0%, rgba(47,128,237,1) 49%, rgba(45,158,224,1) 100%);
+ background: url('/backgroundImg.jpg');
+ background-repeat:no-repeat;
+ background-size:250vh;
+ background-position:center;
+
+ ${media.lessThan("large")`
+    /* screen width is less than 768px (medium) */
+    background-position:center;
+    background-size:180vh;
+
+  `}
 
 `
 
@@ -33,7 +45,11 @@ padding: 0 0.40rem;
 export const FormWrapper = styled.form`
 
 width:350px;
-max-width:350px;
+
+${media.lessThan("large")`
+    /* screen width is less than 768px (medium) */
+    width:250px;
+  `}
 
 `
 
@@ -45,11 +61,15 @@ border-radius:10px;
 display:block;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border:0;
-padding:2px;
+font-size:1.2rem;
+padding-left:10px;
+
 
 ::placeholder{
-    font-size:0.95rem;
+    font-size:1rem;
+    padding-left:10px;
 }
+
 
 `
 
@@ -61,20 +81,28 @@ export const ErrorInput = styled.p`
 
 `
 
-export const Submit = styled.button`
 
+
+
+export const Submit = styled.button`
 
 width:100%;
 height:36px;
 margin-top:20px;
 border:0;
-color:#FFF;
+color:#000;
 text-align:center;
 font-size:1.2rem;
-background-color:#5B22B8;
+background-color:#7FFFD4;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 cursor:pointer;
-padding: 10px 20px;
+padding: 10px 20px; 
 border-radius:10px;
+
+&:hover{
+    background:#5B22B8;
+    transition-duration:.3s;
+    color:#FFF;
+}
 
 `

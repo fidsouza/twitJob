@@ -1,5 +1,7 @@
 import React from 'react'
 import {useForm} from 'react-hook-form'
+import Image from 'next/image'
+
 
 import api from '../../Services/api'
 
@@ -15,6 +17,7 @@ const DefaultPage = () => {
 
     return (
     <S.Section>
+
         <S.Title>TwitJob</S.Title>
         <S.Description>receba vagas de emprego sem complição direto no seu e-mail,sem cadastro em plataformas,
         em apenas 140 carácteres toda a semana.</S.Description>
