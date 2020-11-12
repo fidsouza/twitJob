@@ -56,18 +56,24 @@ ${media.lessThan("large")`
 export const InputText = styled.input`
 
 width:100%;
-height:26px;
-border-radius:10px;
+height:4rem;
+border-radius:4px;
 display:block;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border:0;
 font-size:1.2rem;
-padding-left:10px;
+text-align:center;
+outline: none;
 
+
+&:focus{
+   border: 3px solid rgb(130, 87, 230);
+
+}
 
 ::placeholder{
     font-size:1rem;
-    padding-left:10px;
+    padding:10px;
+
 }
 
 
@@ -87,7 +93,7 @@ export const ErrorInput = styled.p`
 export const Submit = styled.button`
 
 width:100%;
-height:36px;
+height:4rem;
 margin-top:20px;
 border:0;
 color:#000;
@@ -97,7 +103,7 @@ background-color:#7FFFD4;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 cursor:pointer;
 padding: 10px 20px; 
-border-radius:10px;
+border-radius:4px;
 
 &:hover{
     background:#5B22B8;
