@@ -1,20 +1,28 @@
 import React from 'react'
 import {useForm} from 'react-hook-form'
-
-
+import { useRouter } from 'next/router'
 
 import api from '../../Services/api'
 
 import * as S from './styled'
 
-const DefaultPage = () => {
+interface IData {
+    email:string
+
+}
+
+
+const DefaultPage:React.FC= () => {
 
     const FormId = 1807218
+    const router = useRouter()
 
-    const { register, handleSubmit, errors } = useForm();
-    function onSubmit(data) {
 
-        console.log(process.env.NEXT_PUBLIC_API_KEY_CONVERTKIT);
+    const { register, handleSubmit, errors } = useForm()
+    async function onSubmit(data:IData) {
+        api.post(`forms/${FormId}/subscribe`,{api_key:process.env.NEXT_PUBLIC_API_KEY_CONVERTKIT
+                                             ,email:data.email})
+        router.push("/confirmation")
       }
     
 

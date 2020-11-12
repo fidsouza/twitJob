@@ -4,6 +4,8 @@ import DefaultPage from '../pages/Components/Home'
 
 export default function Home() {
   return (
-    <DefaultPage/>
+  <DefaultPage>
+    <Head/>
+  </DefaultPage>
   )
 }
