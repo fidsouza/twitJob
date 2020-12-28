@@ -23,7 +23,7 @@ export const Section = styled.section`
 `
 
 export const Title = styled.h1`
-margin-top:5rem;
+margin-top:7rem;
 color:#FFF;
 font-size:2.8rem;
 font-weight:700;
@@ -35,7 +35,7 @@ margin: 1rem auto;
 line-height:1.4rem;
 font-size:1.1rem;
 color:#FFF;
-font-weight:100;
+font-weight:200;
 text-align:center;
 padding: 0 0.40rem;
 
@@ -86,9 +86,6 @@ export const ErrorInput = styled.p`
  padding:0.85rem 0 0 0;
 
 `
-
-
-
 
 export const Submit = styled.button`
 
